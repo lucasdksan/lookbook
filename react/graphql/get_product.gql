@@ -1,0 +1,82 @@
+query GET_PRODUCT($id: ID!) {
+    product(identifier: { field: id, value: $id }) {
+        productReference
+        productName
+        productId
+        brand
+        brandId
+        cacheId
+        categoryId
+        categories
+        description
+        linkText
+        metaTagDescription
+        titleTag
+        link
+        skuSpecifications {
+            field {
+                name
+            }
+            values {
+                name
+            }
+        }
+        productClusters {
+            id
+            name
+        }
+        priceRange {
+            listPrice {
+                highPrice
+                lowPrice
+            }
+            sellingPrice {
+                highPrice
+                lowPrice
+            }
+        }
+        categoryTree {
+            id
+            name
+        }
+        items {
+            itemId
+            nameComplete
+            name
+            referenceId {
+                Key
+                Value
+            }
+            ean
+            images {
+                cacheId
+                imageId
+                imageLabel
+                imageTag
+                imageText
+                imageUrl
+            }
+            variations {
+                name
+                values
+            }
+            sellers {
+                sellerDefault
+                sellerId
+                commertialOffer {
+                    Price
+                    ListPrice
+                    spotPrice
+                    AvailableQuantity
+                    Installments {
+                        Value
+                        PaymentSystemName
+                        NumberOfInstallments
+                        Name
+                        InterestRate
+                    }
+                }
+            }
+        }
+    }
+}

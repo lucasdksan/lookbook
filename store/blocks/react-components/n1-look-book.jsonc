@@ -1,0 +1,38 @@
+{
+    "n1-look-book": {
+        "props": {
+            "VtexContainer": "flex-layout.row#n1-look-book-container",
+            "VtexSlider": "slider-layout#n1-look-book-slider",
+            "banner_list": [
+                {
+                    "image": "",
+                    "image_mobile": "",
+                    "alt": "",
+                    "coordinate_list": [
+                        {
+                            "coordinates": "",
+                            "product_id": ""
+                        }
+                    ]
+                },
+                {}
+            ]
+        }
+    },
+    "flex-layout.row#n1-look-book-container": {
+        "title": "Container Principal do lookbook",
+        "props": {
+            "blockClass": [
+                "look-book-container"
+            ]
+        }
+    },
+    "slider-layout#n1-look-book-slider": {
+        "props": {
+            "autoplay": {
+                "timeout": 5000,
+                "stopOnHover": false
+            }
+        }
+    }
+}
