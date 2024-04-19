@@ -1,38 +1,39 @@
 {
     "n1-look-book": {
         "props": {
-            "VtexContainer": "flex-layout.row#n1-look-book-container",
             "VtexSlider": "slider-layout#n1-look-book-slider",
             "banner_list": [
                 {
-                    "image": "",
-                    "image_mobile": "",
-                    "alt": "",
+                    "image": "https://agencian1.vtexassets.com/assets/vtex/assets-builder/agencian1.store-template/3.0.1/home/3___25f3906313e7cda52e34675d092d54f2.png",
+                    "image_mobile": "https://agencian1.vtexassets.com/assets/vtex/assets-builder/agencian1.store-template/3.0.1/home/3___25f3906313e7cda52e34675d092d54f2.png",
+                    "alt": "Banner exemplo",
                     "coordinate_list": [
                         {
-                            "coordinates": "",
-                            "product_id": ""
+                            "coordinates": "51.94%#76.68%",
+                            "product_id": "1234636"
                         }
                     ]
                 },
-                {}
-            ]
-        }
-    },
-    "flex-layout.row#n1-look-book-container": {
-        "title": "Container Principal do lookbook",
-        "props": {
-            "blockClass": [
-                "look-book-container"
+                {
+                    "image": "https://agencian1.vtexassets.com/assets/vtex/assets-builder/agencian1.store-template/3.0.1/home/3___25f3906313e7cda52e34675d092d54f2.png",
+                    "image_mobile": "https://agencian1.vtexassets.com/assets/vtex/assets-builder/agencian1.store-template/3.0.1/home/3___25f3906313e7cda52e34675d092d54f2.png",
+                    "alt": "Banner exemplo",
+                    "coordinate_list": []
+                },
+                {
+                    "image": "https://agencian1.vtexassets.com/assets/vtex/assets-builder/agencian1.store-template/3.0.1/home/3___25f3906313e7cda52e34675d092d54f2.png",
+                    "image_mobile": "https://agencian1.vtexassets.com/assets/vtex/assets-builder/agencian1.store-template/3.0.1/home/3___25f3906313e7cda52e34675d092d54f2.png",
+                    "alt": "Banner exemplo",
+                    "coordinate_list": []
+                }
             ]
         }
     },
     "slider-layout#n1-look-book-slider": {
         "props": {
-            "autoplay": {
-                "timeout": 5000,
-                "stopOnHover": false
-            }
+            "blockClass": [
+                "n1-look-book-slider"
+            ]
         }
     }
 }

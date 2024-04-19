@@ -14,7 +14,7 @@ export const get_coordinate = (event, containerRef) => {
         const percentageX = ((x / width) * 100).toFixed(2);
         const percentageY = ((y / height) * 100).toFixed(2);
 
-        const result = `(${percentageX}%-${percentageY}%)`;
+        const result = `${percentageX}%#${percentageY}%`;
 
         navigator.clipboard.writeText(result).then(() => {
             console.log("Resultado copiado para a área de transferência: " + result);

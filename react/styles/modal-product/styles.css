@@ -1,0 +1,9 @@
+.modal-product-container{}
+
+.modal-product-close-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.modal-product-data{}

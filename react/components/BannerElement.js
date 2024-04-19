@@ -1,8 +1,10 @@
 import { useRef } from "react";
 import { useRuntime } from "vtex.render-runtime";
 import { get_coordinate } from "../utils/get_coordinate";
-import { class_generator } from "../utils/class_generator";
+
 import Pin from "./Pin";
+
+import styles from "../styles/banner-element/styles.css";
 
 const BannerElement = ({ banner })=>{
     const containerRef = useRef(null); 
@@ -12,12 +14,12 @@ const BannerElement = ({ banner })=>{
 
     return(
         <div
-            className={class_generator("n1-lookbook","banner-element-container")}
+            className={styles["banner-element-container"]}
             ref={containerRef}
             onClick={(event) => get_coordinate(event, containerRef)}
         >
             <img 
-                className={class_generator("n1-lookbook","banner")} 
+                className={styles["banner-element-banner"]} 
                 src={ isMobile ? image_mobile : image } 
                 alt={alt} 
             />
