@@ -6,7 +6,7 @@ import Pin from "./Pin";
 
 import styles from "../styles/banner-element/styles.css";
 
-const BannerElement = ({ banner })=>{
+const BannerElement = ({ banner, pin_icon })=>{
     const containerRef = useRef(null); 
     const { deviceInfo: { isMobile } } = useRuntime();
 
@@ -23,7 +23,7 @@ const BannerElement = ({ banner })=>{
                 src={ isMobile ? image_mobile : image } 
                 alt={alt} 
             />
-            <Pin coordinate_list={coordinate_list} />
+            <Pin pin_icon={pin_icon} coordinate_list={coordinate_list} />
         </div>
     );
 }
