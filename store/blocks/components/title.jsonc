@@ -1,0 +1,20 @@
+{
+    "rich-text#title-lookbook": {
+        "title": "Título da Página",
+        "props": {
+            "text": "Looks com ofertas",
+            "blockClass": [
+                "title-lookbook"
+            ]
+        }
+    },
+    "rich-text#sub-title-lookbook": {
+        "title": "Sub Título da Página",
+        "props": {
+            "text": "Mussum Ipsum, cacilds vidis litro abertis. Eu nunca mais boto a boca num copo de cachaça, agora eu só uso canudis! Bota 1 metro de cachacis aí pra viagem! Per aumento de cachacis, eu reclamis. Não sou faixa preta cumpadi, sou preto inteiris, inteiris.",
+            "blockClass": [
+                "sub-title-lookbook"
+            ]
+        }
+    }
+}

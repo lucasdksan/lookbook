@@ -19,14 +19,6 @@ export const schema = {
                         },
                         default: ""
                     },
-                    image_mobile: {
-                        title: "Image (URL) Mobile",
-                        type: "string",
-                        widget: {
-                            "ui:widget": "image-uploader",
-                        },
-                        default: ""
-                    },
                     alt: {
                         title: "Texto alternativo da image",
                         type: "string",
@@ -39,7 +31,6 @@ export const schema = {
                         items: {
                             title: "Coordenadas",
                             type: "object",
-                            description: "Clique na imagem e coloque na região as coordenadas do pin usando ctrl+v",
                             properties: {
                                 coordinates: {
                                     title: "Coordenadas do point",

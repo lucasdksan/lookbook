@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useRuntime } from "vtex.render-runtime";
 import { get_coordinate } from "../utils/get_coordinate";
 
 import Pin from "./Pin";
@@ -7,10 +6,8 @@ import Pin from "./Pin";
 import styles from "../styles/banner-element/styles.css";
 
 const BannerElement = ({ banner, pin_icon })=>{
-    const containerRef = useRef(null); 
-    const { deviceInfo: { isMobile } } = useRuntime();
-
-    const { image, image_mobile, alt, coordinate_list } = banner;
+    const containerRef = useRef(null);
+    const { image, alt, coordinate_list } = banner;
 
     return(
         <div
@@ -20,7 +17,7 @@ const BannerElement = ({ banner, pin_icon })=>{
         >
             <img 
                 className={styles["banner-element-banner"]} 
-                src={ isMobile ? image_mobile : image } 
+                src={image} 
                 alt={alt} 
             />
             <Pin pin_icon={pin_icon} coordinate_list={coordinate_list} />

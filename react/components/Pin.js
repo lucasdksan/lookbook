@@ -1,8 +1,10 @@
 import { useState } from "react";
 import ModalProduct from "./ModalProduct";
 
-import styles from "../styles/pin/styles.css";
 import { encoder_coordinate } from "../utils/encoder_coordinate";
+
+import styles from "../styles/pin/styles.css";
+import { get_position } from "../utils/get_position";
 
 const Pin = ({ coordinate_list, pin_icon }) => {
     const [state_pdt, set_state_pdt] = useState(null);
@@ -14,11 +16,12 @@ const Pin = ({ coordinate_list, pin_icon }) => {
         <>
             {coordinate_list.map((coordinate, key) => {
                 const { coordinate_x, coordinate_y } = encoder_coordinate(coordinate.coordinates);
+                const position_modal = get_position(coordinate_x, coordinate_y);
 
                 return (
                     <div style={{ top: coordinate_y, left: coordinate_x }} key={key} className={styles["pin-container"]}>
                         <div className={styles["pin-reference"]}>
-                            <ModalProduct state_pdt={state_pdt} set_state_pdt={set_state_pdt} product_id={coordinate.product_id} />
+                            <ModalProduct position_modal={position_modal} state_pdt={state_pdt} set_state_pdt={set_state_pdt} product_id={coordinate.product_id} />
                             <button onClick={() => set_state_pdt((product_id) => product_id === coordinate.product_id ? null : coordinate.product_id)} className={styles["pin-btn"]}>
                                 { pin_icon !== "" && pin_icon !== undefined && pin_icon ? <div dangerouslySetInnerHTML={{ __html: pin_icon }} /> : (
                                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">

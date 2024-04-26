@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.container--title-lookbook,
+.container--sub-title-lookbook {
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper--sub-title-lookbook {
+    max-width: 788px;
+}
+
+.paragraph--title-lookbook {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 170%;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+}
+
+.paragraph--sub-title-lookbook {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 170%;
+    text-align: center;
+    color: #000000;
+    margin: 0px;
+}

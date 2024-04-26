@@ -1,7 +1,22 @@
 {
     "store.custom#lookbook": {
         "blocks": [
+            "responsive-layout.desktop",
+            "responsive-layout.mobile"
+        ]
+    },
+    "responsive-layout.desktop": {
+        "children": [
+            "rich-text#title-lookbook",
+            "rich-text#sub-title-lookbook",
             "n1-look-book"
+        ]
+    },
+    "responsive-layout.mobile": {
+        "children": [
+            "rich-text#title-lookbook",
+            "rich-text#sub-title-lookbook",
+            "n1-look-book#mobile"
         ]
     }
 }

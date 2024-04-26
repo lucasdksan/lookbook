@@ -4,15 +4,37 @@
             "VtexSlider": "slider-layout#n1-look-book-slider"
         }
     },
+    "n1-look-book#mobile": {
+        "title": "Lista dos Banners Mobile",
+        "props": {
+            "VtexSlider": "slider-layout#n1-look-book-slider-mobile"
+        }
+    },
     "slider-layout#n1-look-book-slider": {
+        "props": {
+            "itemsPerPage": {
+                "desktop": 2,
+                "tablet": 2,
+                "phone": 2
+            },
+            "centerModeSlidesGap": 5,
+            "showPaginationDots": "never",
+            "blockClass": [
+                "n1-look-book-slider"
+            ]
+        }
+    },
+    "slider-layout#n1-look-book-slider-mobile": {
         "props": {
             "itemsPerPage": {
                 "desktop": 1,
                 "tablet": 1,
                 "phone": 1
             },
+            "showPaginationDots": "never",
             "blockClass": [
-                "n1-look-book-slider"
+                "n1-look-book-slider",
+                "n1-look-book-slider-mobile"
             ]
         }
     }

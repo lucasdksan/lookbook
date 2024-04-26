@@ -5,7 +5,7 @@ import GET_PRODUCT from "../graphql/get_product.gql";
 
 import styles from "../styles/modal-product/styles.css";
 
-const ModalProduct = ({ product_id, set_state_pdt, state_pdt }) => {
+const ModalProduct = ({ product_id, set_state_pdt, state_pdt, position_modal }) => {
     const [product, set_product] = useState();
 
     const { loading, error, data } = useQuery(GET_PRODUCT, {
@@ -21,14 +21,12 @@ const ModalProduct = ({ product_id, set_state_pdt, state_pdt }) => {
         }
     }, [data]);
 
-    console.log("product: ", product);
-
     if (error) return null;
     if (!product) return null;
     if (state_pdt !== product_id) return null;
 
     return (
-        <div className={styles["modal-product-container"]} >
+        <div className={styles["modal-product-container"]} style={{...position_modal}} >
             <div className={styles["modal-product-reference"]}>
                 <button onClick={() => set_state_pdt(null)} className={styles["modal-product-close-btn"]}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
