@@ -1,7 +1,7 @@
 import BannerElement from "./components/BannerElement";
+import GridArea from "./components/GridArea";
 import { schema } from "./utils/schema";
 import styles from "./styles/look-book/styles.css";
-import GridArea from "./components/GridArea";
 
 const LookBook = ({ banner_list, pin_icon, display_mode, config_slider, config_grid, VtexSlider }) => {
     if (!Array.isArray(banner_list)) return null;

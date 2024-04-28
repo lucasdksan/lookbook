@@ -99,7 +99,9 @@ export const schema = {
                 },
                 template_col: {
                     type: "number",
-                    default: 0,
+                    default: 1,
+                    minimum: 0,
+                    maximum: 4,
                     title: "Numéro de Colunas",
                     description: "O maxímo de 4 colunas"
                 },
