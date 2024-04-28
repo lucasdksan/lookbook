@@ -54,3 +54,5 @@ Este processo permite criar banners interativos com pontos clicáveis, cada um a
 | `pin-container` | Container do Pin. |
 | `pin-reference` | Div de referencia para aplicar o position relative para o modal do produto. |
 | `pin-btn` | Botão para abrir o modal. |
+| `grid-area--container` | Container principal da área dividida em grid. |
+| `grid-area--children` | Div que agrupa os elementos em cada área do grid. |

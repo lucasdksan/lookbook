@@ -24,6 +24,18 @@ export const schema = {
                         type: "string",
                         default: ""
                     },
+                    border_radius: {
+                        type: "number",
+                        default: 0,
+                        title: "Arredondamento das Imagens",
+                        description: "Valor em px"
+                    },
+                    direct_col: {
+                        type: "number",
+                        default: 1,
+                        title: "Qual coluna?",
+                        description: "Essa Prop Só funciona caso o modo Slider estiver desativado."
+                    },
                     coordinate_list: {
                         title: "Lista de Coordenadas",
                         type: "array",
@@ -52,11 +64,46 @@ export const schema = {
         pin_icon: {
             title: "Ícone SVG",
             type: "string",
-            description: "ícone SVG para o pin",
+            description: "ícone em SVG para o pin",
             widget: {
-                'ui:widget': 'textarea',
+                "ui:widget": "textarea",
             },
             default: ""
+        },
+        display_mode:  {
+            type: "boolean",
+            title: "Ativar Slider?",
+            description: "As imagens serão apresentadas em carrossel ou não?",
+            default: true,
+        },
+        config_slider: {
+            type: "object",
+            title: "Configuração do Slider",
+            properties: {
+                quantity: {
+                    type: "number",
+                    default: 1,
+                    title: "Quantidade de Elementos no Carrossel."
+                }
+            }
+        },
+        config_grid: {
+            type: "object",
+            title: "Configuração do Grid",
+            properties: {
+                grid_gap: {
+                    type: "number",
+                    default: 0,
+                    title: "Espaçamento entre as imagens",
+                    description: "Valor em px"
+                },
+                template_col: {
+                    type: "number",
+                    default: 0,
+                    title: "Numéro de Colunas",
+                    description: "O maxímo de 4 colunas"
+                },
+            }
         }
     }
 };

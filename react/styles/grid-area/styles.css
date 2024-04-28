@@ -1,0 +1,8 @@
+.grid-area--container {
+    display: grid;
+}
+
+.grid-area--children {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,23 +1,27 @@
 {
     "n1-look-book": {
         "props": {
-            "VtexSlider": "slider-layout#n1-look-book-slider"
+            "VtexSlider": "slider-layout#n1-look-book-slider",
+            "VtexGrid": "flex-layout.row#n1-look-book-grid",
+            "display_mode": true,
+            "config_slider": {
+                "quantity": 2
+            }
         }
     },
     "n1-look-book#mobile": {
         "title": "Lista dos Banners Mobile",
         "props": {
-            "VtexSlider": "slider-layout#n1-look-book-slider-mobile"
+            "VtexSlider": "slider-layout#n1-look-book-slider-mobile",
+            "VtexGrid": "flex-layout.row#n1-look-book-grid-mobile",
+            "display_mode": true,
+            "config_slider": {
+                "quantity": 1
+            }
         }
     },
     "slider-layout#n1-look-book-slider": {
         "props": {
-            "itemsPerPage": {
-                "desktop": 2,
-                "tablet": 2,
-                "phone": 2
-            },
-            "centerModeSlidesGap": 5,
             "showPaginationDots": "never",
             "blockClass": [
                 "n1-look-book-slider"
@@ -26,15 +30,27 @@
     },
     "slider-layout#n1-look-book-slider-mobile": {
         "props": {
-            "itemsPerPage": {
-                "desktop": 1,
-                "tablet": 1,
-                "phone": 1
-            },
             "showPaginationDots": "never",
             "blockClass": [
                 "n1-look-book-slider",
                 "n1-look-book-slider-mobile"
+            ]
+        }
+    },
+    "flex-layout.row#n1-look-book-grid": {
+        "title": "Área das Imagens",
+        "props": {
+            "blockClass": [
+                "n1-look-book-grid"
+            ]
+        }
+    },
+    "flex-layout.row#n1-look-book-grid-mobile": {
+        "title": "Área das Imagens Mobile",
+        "props": {
+            "blockClass": [
+                "n1-look-book-grid",
+                "n1-look-book-grid-mobile"
             ]
         }
     }

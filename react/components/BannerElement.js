@@ -7,12 +7,15 @@ import styles from "../styles/banner-element/styles.css";
 
 const BannerElement = ({ banner, pin_icon })=>{
     const containerRef = useRef(null);
-    const { image, alt, coordinate_list } = banner;
+    const { image, alt, coordinate_list, border_radius } = banner;
 
     return(
         <div
             className={styles["banner-element-container"]}
             ref={containerRef}
+            style={{
+                borderRadius: `${border_radius ? border_radius : 0}px`
+            }}
             onClick={(event) => get_coordinate(event, containerRef)}
         >
             <img 

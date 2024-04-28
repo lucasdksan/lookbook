@@ -7,16 +7,14 @@ import styles from "../styles/modal-product/styles.css";
 
 const ModalProduct = ({ product_id, set_state_pdt, state_pdt, position_modal }) => {
     const [product, set_product] = useState();
-
-    const { loading, error, data } = useQuery(GET_PRODUCT, {
-        variables: { id: product_id },
-    });
+    const { loading, error, data } = useQuery(GET_PRODUCT, { variables: { id: product_id }, });
 
     useEffect(() => {
         if (!!data) {
             const { product: product_data } = data;
             const { items, link, productName } = product_data;
             const { images, sellers } = items[0];
+            
             set_product({ link, productName, image: images[0], seller: sellers[0] });
         }
     }, [data]);
